@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signataires · Appel à la candidature d'Attal 2027</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bleu: #002395;
+    --rouge: #ED2939;
+    --blanc: #faf7f2;
+    --bleu-pale: #eceef8;
+    --bleu-mid: #c5cef0;
+    --rouge-pale: #fce8ea;
+    --or: #c9a227;
+    --gris: #2e2e3e;
+    --gris-clair: #f0ede6;
+    --texte: #1a1a2e;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #ffffff;
+    font-family: 'Source Serif 4', serif;
+    color: var(--texte);
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+
+  .page-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* === HEADER === */
+  .header {
+    background: var(--bleu);
+    padding: 0;
+    margin-bottom: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tricolor-bar {
+    display: flex;
+    height: 8px;
+  }
+  .tricolor-bar .b { background: var(--bleu); flex: 1; }
+  .tricolor-bar .w { background: var(--blanc); flex: 1; }
+  .tricolor-bar .r { background: var(--rouge); flex: 1; }
+
+  .header-inner {
+    padding: 36px 40px 28px;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #001a80 0%, #002395 60%, #001060 100%);
+  }
+
+  .header-inner::before {
+    content: 'RF';
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    font-family: 'Playfair Display', serif;
+    font-size: 100px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.05);
+    letter-spacing: -4px;
+    pointer-events: none;
+  }
+
+  .header-top-label {
+    font-family: 'Source Serif 4', serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 10px;
+  }
+
+  .header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--blanc);
+    line-height: 1.25;
+    margin-bottom: 6px;
+  }
+
+  .header-title span.rouge { color: #ff6b7a; }
+
+  .header-zh {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    font-weight: 300;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+  }
+
+  .header-meta {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .meta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 3px;
+    padding: 4px 12px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.75);
+    letter-spacing: 0.5px;
+  }
+  .meta-pill .dot { 
+    width: 6px; height: 6px; 
+    border-radius: 50%; 
+    background: var(--or);
+  }
+
+  /* === LEGEND === */
+  .legend-bar {
+    background: #f0f2fa;
+    border-left: 4px solid var(--bleu);
+    padding: 14px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    align-items: center;
+    border-top: none;
+  }
+
+  .legend-title {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bleu);
+    margin-right: 4px;
+  }
+
+  .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: var(--gris);
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 1px 7px;
+    border-radius: 2px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+  .badge-re { background: #dce4ff; color: #002395; border: 1px solid #aab9f5; }
+  .badge-hor { background: #fff0d0; color: #8a5a00; border: 1px solid #e8c87a; }
+  .badge-modem { background: #e0f0ff; color: #004a8a; border: 1px solid #90c4f0; }
+  .badge-agir { background: #dff0e8; color: #1a6640; border: 1px solid #8ecfb0; }
+  .badge-lr { background: #ffe8e8; color: #8a0010; border: 1px solid #f5aaaa; }
+  .badge-dvd { background: #f5e8ff; color: #5a0080; border: 1px solid #d0aaee; }
+  .check { color: #1a6640; font-size: 12px; }
+  .circle { color: #8a6000; font-size: 12px; }
+
+  /* === TABLE === */
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid #d0d5e8;
+    box-shadow: 0 8px 40px rgba(0,35,149,0.15), 0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+    background: #faf7f2;
+  }
+
+  thead {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  thead tr:first-child th {
+    background: var(--bleu);
+    color: var(--blanc);
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 12px 14px 10px;
+    border-right: 1px solid rgba(255,255,255,0.15);
+    white-space: nowrap;
+  }
+
+  thead tr:first-child th:last-child { border-right: none; }
+
+  thead tr:first-child th .col-zh {
+    display: block;
+    font-family: 'Noto Serif SC', serif;
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: rgba(255,255,255,0.6);
+    margin-top: 2px;
+    text-transform: none;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid #e8eaf4;
+    transition: background 0.15s;
+  }
+
+  tbody tr:hover { background: #f0f4ff; }
+  tbody tr:nth-child(even) { background: #f5f1ea; }
+  tbody tr:nth-child(even):hover { background: #ecf0ff; }
+
+  td {
+    padding: 11px 14px;
+    vertical-align: top;
+    border-right: 1px solid #e8eaf4;
+    line-height: 1.45;
+  }
+  td:last-child { border-right: none; }
+
+  /* Col 1: # */
+  td.num {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--bleu);
+    width: 38px;
+    padding: 11px 8px;
+    vertical-align: middle;
+  }
+
+  /* Nom */
+  .nom-fr {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--texte);
+    margin-bottom: 2px;
+  }
+  .nom-fr .star { color: var(--or); font-size: 11px; margin-left: 2px; }
+
+  /* Poste */
+  .poste-fr {
+    font-size: 11.5px;
+    color: var(--gris);
+    margin-bottom: 3px;
+  }
+  .poste-zh {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 10.5px;
+    color: #3a3a52;
+    font-weight: 400;
+  }
+
+  /* Parti */
+  td.parti { width: 120px; }
+  .parti-main { margin-bottom: 4px; }
+  .parti-zh {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 10px;
+    color: #3a3a52;
+    font-weight: 400;
+  }
+
+  /* Coop intra */
+  td.coop-intra { width: 200px; }
+  td.coop-cross { width: 220px; }
+
+  .coop-fr {
+    font-size: 11.5px;
+    color: var(--texte);
+    margin-bottom: 3px;
+    line-height: 1.5;
+  }
+  .coop-zh {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 10px;
+    color: #3a3a52;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  /* Source tag */
+  .src {
+    display: inline-block;
+    font-size: 9px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 3px;
+    vertical-align: middle;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+  .src-v { background: #dff0e8; color: #1a6640; }
+  .src-o { background: #fff3d0; color: #8a5a00; }
+
+  /* Color stripe for rows */
+  .stripe-re { border-left: 3px solid var(--bleu); }
+  .stripe-modem { border-left: 3px solid #0080d0; }
+  .stripe-hor { border-left: 3px solid #d09000; }
+  .stripe-lr { border-left: 3px solid #a00010; }
+  .stripe-agir { border-left: 3px solid #209060; }
+  .stripe-dvd { border-left: 3px solid #8000c0; }
+
+  /* Footer */
+  .footer {
+    background: var(--bleu);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .footer-left {
+    font-size: 10px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.5px;
+  }
+  .footer-right {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 10px;
+    color: rgba(255,255,255,0.4);
+    font-weight: 300;
+  }
+  .footer-tricolor {
+    display: flex;
+    height: 3px;
+  }
+  .footer-tricolor .b { background: var(--bleu-pale); flex: 1; }
+  .footer-tricolor .w { background: var(--blanc); flex: 1; }
+  .footer-tricolor .r { background: var(--rouge); flex: 1; }
+
+  /* Section dividers in table */
+  tr.section-row td {
+    background: linear-gradient(90deg, var(--bleu) 0%, #1a3ab0 100%);
+    color: white;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    padding: 5px 14px;
+    border: none;
+  }
+  tr.section-row td span.zh {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: rgba(255,255,255,0.6);
+    margin-left: 8px;
+    font-size: 10px;
+    text-transform: none;
+  }
+
+  .result-tag {
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: 2px;
+    font-size: 9.5px;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+  .result-elu { background: #dff0e8; color: #1a6640; }
+  .result-perdu { background: #fce8ea; color: #8a0010; }
+  .result-en-cours { background: #fff3d0; color: #8a5a00; }
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="tricolor-bar"><div class="b"></div><div class="w"></div><div class="r"></div></div>
+    <div class="header-inner">
+      <div class="header-top-label">Appel des élus locaux · 2026</div>
+      <div class="header-title">
+        « Nous souhaitons que <span class="rouge">Gabriel Attal</span> soit candidat à la présidentielle »
+      </div>
+      <div class="header-zh">「我们希望 Gabriel Attal 参选总统」——500名地方民选官员联署呼吁书·前30名政治档案</div>
+      <div class="header-meta">
+        <span class="meta-pill"><span class="dot"></span>30 signataires analysés · 30名签署人分析</span>
+        <span class="meta-pill"><span class="dot"></span>Données vérifiées mai 2026 · 数据核实至2026年5月</span>
+        <span class="meta-pill"><span class="dot"></span>✅ = source vérifiée · ○ = contextuel</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEGEND -->
+  <div class="legend-bar">
+    <span class="legend-title">Partis ·</span>
+    <span class="legend-item"><span class="badge badge-re">Re</span> Renaissance</span>
+    <span class="legend-item"><span class="badge badge-hor">Hor</span> Horizons</span>
+    <span class="legend-item"><span class="badge badge-modem">MoDem</span> Mouvement Démocrate</span>
+    <span class="legend-item"><span class="badge badge-agir">Agir</span> Agir (fusionné Re)</span>
+    <span class="legend-item"><span class="badge badge-lr">LR</span> Les Républicains</span>
+    <span class="legend-item"><span class="badge badge-dvd">DVD/LDVC/LDVD</span> Divers droite/centre (étiquette officielle)</span>
+    <span style="margin-left:12px;border-left:1px solid #ccc;padding-left:12px;" class="legend-item"><span class="check">✅</span> source vérifiée</span>
+    <span class="legend-item"><span class="circle">○</span> source contextuelle</span>
+  </div>
+
+  <!-- TABLE -->
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th style="width:38px">#</th>
+        <th>Nom · Poste actuel <span class="col-zh">姓名 · 现职</span></th>
+        <th>Parti · Tendance <span class="col-zh">党派 · 政治倾向</span></th>
+        <th>Coopération intra-camp <span class="col-zh">阵营内合作</span></th>
+        <th>Coopération inter-partis <span class="col-zh">跨阵营合作</span></th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <!-- SECTION 1 -->
+    <tr class="section-row">
+      <td colspan="5">I. Exécutifs régionaux &amp; départementaux <span class="zh">· 大区/省级行政长官</span></td>
+    </tr>
+
+    <!-- 1. Muselier -->
+    <tr class="stripe-re">
+      <td class="num">1</td>
+      <td>
+        <div class="nom-fr">Renaud Muselier <span class="star">★★★</span></div>
+        <div class="poste-fr">Président, Région SUD (PACA) — candidat au Sénat, sept. 2026 <span class="src src-v">✅</span></div>
+        <div class="poste-zh">普罗旺斯-阿尔卑斯-蔚蓝海岸大区主席；已宣布角逐2026年9月参议院议席</div>
+        <div class="result-tag result-en-cours">Transition Région → Sénat</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Renaissance；戴高乐主义底色；大区代表委员</div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Délégué régional Renaissance. Revendique une « majorité plurielle » au Conseil régional SUD associant républicains et démocrates de sensibilités diverses. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">Re大区代表；构建涵盖14个组别的大区联合多数</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">29 maires sortants soutenus, 28 réélus (résultats mars 2026 selon Muselier). Pour les Sénatoriales sept. 2026 : candidate sous bannière « Nos territoires d'abord ! » ; discussions pour liste commune Re + LR en cours, sénatrice LR V. Boyer confirme les négociations. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">其支持的29名市长候选人中28名当选（Muselier自述数据）；2026年9月参议院选举计划以"Nos territoires d'abord！"旗号联合LR参选，与LR参议员Boyer谈判确认中；目标3-4席；但另一Re候选人Agresti-Roubache入局使联合名单前景更趋复杂</div>
+      </td>
+    </tr>
+
+    <!-- 2. Suau -->
+    <tr class="stripe-re">
+      <td class="num">2</td>
+      <td>
+        <div class="nom-fr">Laurent Suau</div>
+        <div class="poste-fr">Président, Conseil départemental de Lozère <span class="src src-o">○</span></div>
+        <div class="poste-zh">洛泽尔省议会主席</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Renaissance正式成员；Bureau exécutif成员（普通成员，无特定DF职务）<span class="src src-v">✅ doc.parti.re/Bureau_executif_2025.pdf</span></div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Membre du bureau exécutif Renaissance ; réseau Re au niveau départemental en Lozère. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">Re执行局成员（2025年名单确认）；省级层面与Re中央协调</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Lozère : tradition centre-droit ; ouverture vers LR ; résistance forte au RN. <span class="src src-o">○</span></div>
+        <div class="coop-zh">Lozère中右传统；向LR开放；抵制RN</div>
+      </td>
+    </tr>
+
+    <!-- SECTION 2 -->
+    <tr class="section-row">
+      <td colspan="5">II. Maires de grandes et moyennes villes <span class="zh">· 大中城市市长</span></td>
+    </tr>
+
+    <!-- 3. Cazenave -->
+    <tr class="stripe-re">
+      <td class="num">3</td>
+      <td>
+        <div class="nom-fr">Thomas Cazenave <span class="star">★★★</span></div>
+        <div class="poste-fr">Maire de Bordeaux — élu 22 mars 2026, 50,95 % <span class="src src-v">✅</span></div>
+        <div class="poste-zh">波尔多市长（2026年3月22日当选，以50.95%极微弱差距击败绿党现任市长）</div>
+        <div class="result-tag result-elu">Élu ✅</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Renaissance核心；Bureau exécutif：SGD à la communication ✅ doc.parti.re/Bureau_executif_2025.pdf；前公共账务部长代理（博尔纳/阿塔尔政府）；ENA+ENS出身</div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Unique maire Re d'une grande métropole. Soutien Attal + Macron. Futur candidat à la présidence de la métropole. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">法国大城市中唯一Re系市长；获Attal与Macron双重背书；同时争取都市圈主席职位</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Liste d'union droite-centre avec Horizons, MoDem, LR, Parti Radical ; alliance clé avec N. Delattre, présidente du Parti Radical (non LR). <span class="src src-v">✅</span></div>
+        <div class="coop-zh">联合Horizons、MoDem、LR与Parti Radical组成右翼-中间统一名单；关键盟友为Parti Radical主席N. Delattre（非LR）；承诺保留前任绿党城市绿化政策以争取生态选民</div>
+        <div class="coop-zh">联合LR、Horizons、MoDem组成右翼-中间统一名单；与LR参议员N. Delattre结盟；承诺保留前任绿党的城市绿化政策以争取生态选民</div>
+      </td>
+    </tr>
+
+    <!-- 4. Armand -->
+    <tr class="stripe-re">
+      <td class="num">4</td>
+      <td>
+        <div class="nom-fr">Antoine Armand <span class="star">★★★</span></div>
+        <div class="poste-fr">Maire d'Annecy — élu 22 mars 2026, 49,36 % (triangulaire) <span class="src src-v">✅</span></div>
+        <div class="poste-zh">Annecy市长（2026年3月22日三方竞争中以49.36%当选；2e: Mulatier-Gachet左联35.12%；3e: Roit-Lévêque RN 15.52%；前任Astorg EELV未谋求连任）</div>
+        <div class="result-tag result-elu">Élu ✅</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Renaissance；Bureau exécutif：SGD au financement du parti ✅ doc.parti.re/Bureau_executif_2025.pdf；前经济与工业部长（Barnier政府）；第五共和国最年轻经济部长（33岁）</div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Soutenu par Horizons, MoDem, LR, Parti Radical et UDI — coalition de centre et droite. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">获Horizons、MoDem、LR、Parti Radical与UDI五方联合背书——Re主导但以更宽中右联盟形式出战</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Triangulaire contre gauche unie et RN ; le sortant EELV F. Astorg n'était pas candidat. Alliance multi-partis de droite et du centre explicitement tournée contre la gauche et le RN. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">前任绿党市长Astorg未参选；Armand以多党联合对阵左联与RN；成功以中右多党联盟模式赢得市政权</div>
+    </tr>
+
+    <!-- 5. Thuriot -->
+    <tr class="stripe-re">
+      <td class="num">5</td>
+      <td>
+        <div class="nom-fr">Denis Thuriot</div>
+        <div class="poste-fr">Maire de Nevers <span class="src src-o">○</span></div>
+        <div class="poste-zh">Nevers市长</div>
+      </td>
+      <td class="parti stripe-re">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Renaissance；Membre de droit du Bureau exécutif ✅ doc.parti.re/Bureau_executif_2025.pdf；2026年3月22日以44.8%第三度当选Nevers市长</div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Réseau Re dans la Nièvre ; 6 conseillers municipaux co-signataires. Attal le cite parmi les 200 maires Renaissance élus en France. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">Re在涅夫勒省的网络骨干；其6名Nevers市政官员集体联署；Attal明确将其列为全国200名Re系当选市长之一</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Position centriste dans une ville historiquement à gauche ; ouverture vers LR. <span class="src src-o">○</span></div>
+        <div class="coop-zh">历史左翼城市中的中间立场；向LR保持开放</div>
+      </td>
+    </tr>
+
+    <!-- 6. Etchegaray -->
+    <tr class="stripe-re">
+      <td class="num">6</td>
+      <td>
+        <div class="nom-fr">Jean-René Etchegaray</div>
+        <div class="poste-fr">Maire de Bayonne — réélu 22 mars 2026, 50,70 % <span class="src src-v">✅</span></div>
+        <div class="poste-zh">Bayonne市长（第三任，以50.70%击败左联Iriart 41.01%和极右Lesellier 8.29%）；同时担任巴斯克共同体主席</div>
+      </td>
+      <td class="parti stripe-re">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Renaissance（正式党员）；2026年再度大胜连任Bayonne市长；同时担任巴斯克共同体主席</div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Figure Re majeure du Pays Basque ; président de la Communauté Pays Basque. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">巴斯克地区Re核心人物；兼任巴斯克共同体主席，覆盖158个市镇的跨市机构</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Contacts pragmatiques avec forces nationalistes basques (EH Bai) au niveau local ; rejet des extrêmes nationaux. <span class="src src-o">○</span></div>
+        <div class="coop-zh">地方层面与巴斯克民族主义力量（EH Bai）保持务实接触；国家层面排斥极端</div>
+      </td>
+    </tr>
+
+    <!-- 7. Huvet -->
+    <tr class="stripe-dvd">
+      <td class="num">7</td>
+      <td>
+        <div class="nom-fr">Alexandre Huvet</div>
+        <div class="poste-fr">Maire de Challans (Vendée) — élu 22 mars 2026, 45,27 % (triangulaire) <span class="src src-v">✅</span></div>
+        <div class="poste-zh">Challans市长（旺代省）；新当选（击败现任市长Pascreau 34.08%，RN候选人20.66%）；前任第一副市长</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-dvd">LDVC</span></div>
+        <div class="parti-zh">列表标注"divers centre"（中间杂项）；无Re官方标签；Vendée地区中右温和派</div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Aucune affiliation Re officielle confirmée ; élu sous étiquette divers centre. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">无确认Re党籍；以"divers centre"标签当选；与中央党派关系待厘清</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Victoire face au maire sortant (même famille politique) et au RN ; triangulaire intra-centre-droite vendéenne. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">击败同属中右阵营的现任市长；打败RN；旺代保守地区内部中右竞争格局</div>
+      </td>
+    </tr>
+
+    <!-- 8. Miro -->
+    <tr class="stripe-re">
+      <td class="num">8</td>
+      <td>
+        <div class="nom-fr">Julien Miro</div>
+        <div class="poste-fr">Maire de Castelnau-le-Lez (Hérault) — élu 22 mars 2026, 47,52 % <span class="src src-v">✅</span></div>
+        <div class="poste-zh">Castelnau-le-Lez市长（埃罗省）；新当选（击败现任市长Lafforgue 21.47%）；同时兼任Engie集团议会关系总监</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Renaissance正式成员；Bureau exécutif成员，担任"Délégué fonctionnel auprès du SGD aux élus locaux"（地方民选官员方向功能代表）<span class="src src-v">✅ doc.parti.re/Bureau_executif_2025.pdf</span></div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Membre du bureau exécutif Re, délégué fonctionnel aux élus locaux — rôle de coordination entre le parti et les élus territoriaux. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">Re执行局"地方民选官员"方向功能代表；负责协调党中央与地方民选官员关系；其当选市长强化了Re地方网络的代表性</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Élu sous étiquette LDVD (divers droite, étiquette électorale locale) mais membre Re confirmé ; triangulaire à quatre listes dans l'Hérault. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">选举标签为LDVD（地方习惯，非党籍指标）；Re成员身份由官方名单证实；四方竞争中击败同属右派的现任市长</div>
+      </td>
+    </tr>
+
+    <!-- 9. Claverie -->
+    <tr class="stripe-dvd">
+      <td class="num">9</td>
+      <td>
+        <div class="nom-fr">Pascal Claverie</div>
+        <div class="poste-fr">Maire de Tarbes (Hautes-Pyrénées) — élu 22 mars 2026, 38,85 % <span class="src src-v">✅</span></div>
+        <div class="poste-zh">Tarbes市长（上比利牛斯省）；新当选；曾任前市长Trémège第一副市长；以38.85%击败RN（35.71%）和LDVD（25.45%）</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-dvd">LDVC</span></div>
+        <div class="parti-zh">列表标注"divers centre"；无Re官方标签；Hautes-Pyrénées中间右翼本地政治人物；前市长Trémège因受法律制裁无法参选</div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Aucune affiliation Re officielle confirmée ; élu sous étiquette LDVC. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">无确认Re党籍；以"divers centre"标签当选；与Re阵营的距离尚无文件证明</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Victoire en triangulaire (5 listes qualifiées, rare) face au RN, pourtant arrivé en tête au 1er tour ; front républicain de fait. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">五方竞争（罕见格局）中RN首轮领先但二轮落败；Claverie以中间联盟实现事实上的共和阵线抗RN；典型"barrages"成功案例</div>
+      </td>
+    </tr>
+
+    <!-- 12. Orsucci -->
+    <tr class="stripe-re">
+      <td class="num">12</td>
+      <td>
+        <div class="nom-fr">Jean-Charles Orsucci</div>
+        <div class="poste-fr">Maire de Bonifacio (Corse-du-Sud) <span class="src src-o">○</span></div>
+        <div class="poste-zh">Bonifacio市长（南科西嘉）</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Renaissance正式成员；Bureau exécutif成员（普通成员）<span class="src src-v">✅ doc.parti.re/Bureau_executif_2025.pdf</span></div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Allié Re rare en Corse, dominée par le nationalisme local. <span class="src src-o">○</span></div>
+        <div class="coop-zh">民族主义主导的科西嘉政治生态中Re的稀有盟友</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Contacts pragmatiques avec forces nationalistes corses ; maintien strict du cadre républicain. <span class="src src-o">○</span></div>
+        <div class="coop-zh">与科西嘉地方民族主义力量保持务实接触，但坚守共和框架</div>
+      </td>
+    </tr>
+
+    <!-- 13. Riester -->
+    <tr class="stripe-agir">
+      <td class="num">13</td>
+      <td>
+        <div class="nom-fr">Franck Riester <span class="star">★★★</span></div>
+        <div class="poste-fr">Maire de Coulommiers — élu 15 mars 2026, 66,22 % <span class="src src-v">✅</span></div>
+        <div class="poste-zh">Coulommiers市长（2026年3月15日以66.22%一轮当选；随即辞去议员职务）</div>
+        <div class="result-tag result-elu">Élu ✅ · Démissionné de l'AN</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-agir">Agir</span>→<span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Re；Bureau exécutif：SGD aux élections + Membre de droit ✅ doc.parti.re/Bureau_executif_2025.pdf；Agir创始人（已并入Re）；前文化、外贸等多届部长；2011年首位公开出柜法国议员</div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Cofondateur d'Agir, parti fusionné dans Re. Stratège central de la macronie. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">Agir共同创始人；Re建党元老；中间-中右融合的关键操盘手</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Campagne sans étiquette mais soutenu par Re ; adversaire RN battu à 33,8 %. Vote en faveur du mariage pour tous (2013), contre la majorité de droite. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">以无党籍身份参选但获Re背书；击败RN对手；2013年曾支持社会党同婚法案，突破右翼惯例</div>
+      </td>
+    </tr>
+
+    <!-- 14. Rudigoz -->
+    <tr class="stripe-re">
+      <td class="num">14</td>
+      <td>
+        <div class="nom-fr">Thomas Rudigoz</div>
+        <div class="poste-fr">Maire du 5e arrondissement de Lyon — réélu 15 mars 2026, 50,38 % (1er tour) <span class="src src-v">✅</span></div>
+        <div class="poste-zh">Lyon第5区区长（以50.38%首轮当选，击败左联Georgel 30.31%）；2017-2024年前国民议会议员（Re，隆省）；Re指定里昂地区领衔人物</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Renaissance正式成员；Bureau exécutif成员，担任"DF auprès du SGD aux adhésions"（党员发展方向功能代表）<span class="src src-v">✅ doc.parti.re/Bureau_executif_2025.pdf</span></div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Désigné chef de file Re pour les municipales lyonnaises ; ralliement à la candidature Aulas (droite-centre) pour la mairie de Lyon. Doucet (EELV) réélu maire de Lyon avec 50,67 %. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">Re指定里昂区代表；Re支持Aulas右中联盟参选里昂市长但未能击败绿党现任市长Doucet（后者以50.67%险胜）；Rudigoz第5区胜选是Re在里昂仅有的直接战果</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Interaction institutionnelle avec la mairie écologiste de Doucet ; coopération possible avec LR à l'échelle métropolitaine. <span class="src src-o">○</span></div>
+        <div class="coop-zh">在绿党Doucet执政的里昂市政格局下保持制度性互动；都市圈层面寻求与LR合作</div>
+      </td>
+    </tr>
+
+    <!-- SECTION 3 -->
+    <tr class="section-row">
+      <td colspan="5">III. Anciens ministres &amp; députés — élus locaux <span class="zh">· 前部长/议员转型地方代表</span></td>
+    </tr>
+
+    <!-- 10. David -->
+    <tr class="stripe-re">
+      <td class="num">10</td>
+      <td>
+        <div class="nom-fr">Dominique David</div>
+        <div class="poste-fr">Maire de Bernos-Beaulac — ancienne députée Re (Gironde 1, prédécesseure de Cazenave) <span class="src src-v">✅</span></div>
+        <div class="poste-zh">Bernos-Beaulac市长；前国民议会议员（吉伦特省第1选区，Cazenave的前任）</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Renaissance资深成员；吉伦特省Re基础建设者</div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Architecte de la base Re en Gironde ; passage de relais vers Cazenave. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">吉伦特省Re地基铺路人；向Cazenave的"接班"结构</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Gironde historiquement à gauche : stratégie de pénétration centriste vers l'électorat de gauche modéré. <span class="src src-o">○</span></div>
+        <div class="coop-zh">吉伦特左翼大省背景下的中间渗透策略；参与波尔多联合选举阵线</div>
+      </td>
+    </tr>
+
+    <!-- 19. Lainé -->
+    <tr class="stripe-re">
+      <td class="num">20</td>
+      <td>
+        <div class="nom-fr">Fabien Lainé</div>
+        <div class="poste-fr">Maire de Sanguinet — ancien député Re (Gironde) <span class="src src-o">○</span></div>
+        <div class="poste-zh">Sanguinet市长；前国民议会议员（吉伦特省，Re）</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Renaissance；吉伦特省农村-湖区代表</div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Réseau Re en Gironde rurale ; appui à la candidature Cazenave à Bordeaux. <span class="src src-o">○</span></div>
+        <div class="coop-zh">吉伦特省农村Re网络；支持Cazenave参选波尔多</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Stratégie d'absorption de l'électorat centriste dans un département à tradition de gauche. <span class="src src-o">○</span></div>
+        <div class="coop-zh">左翼传统省份中的中间选民吸纳策略</div>
+      </td>
+    </tr>
+
+    <!-- SECTION 4 -->
+    <tr class="section-row">
+      <td colspan="5">IV. Conseillers de Paris &amp; élus métropolitains <span class="zh">· 巴黎市议员及都市圈代表</span></td>
+    </tr>
+
+    <!-- 18. Chassaniol -->
+    <tr class="stripe-re">
+      <td class="num">18</td>
+      <td>
+        <div class="nom-fr">Clara Chassaniol</div>
+        <div class="poste-fr">Conseillère de Paris — ancienne députée Re <span class="src src-o">○</span></div>
+        <div class="poste-zh">巴黎市议员；前国民议会议员（Re）</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Renaissance；巴黎市议会Re团队骨干</div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Groupe Re au Conseil de Paris ; coordination avec la stratégie Bournazel. <span class="src src-o">○</span></div>
+        <div class="coop-zh">巴黎市议会Re党团成员；配合Bournazel整体策略</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Opposition structurelle à la majorité Grégoire (PS) à Paris ; tension compétitive avec LR (Dati). <span class="src src-o">○</span></div>
+        <div class="coop-zh">巴黎市政在野；与PS主导的Grégoire多数构成结构性对立；与LR（Dati系）存在竞争张力</div>
+      </td>
+    </tr>
+
+    <!-- 19. Hoffman -->
+    <tr class="stripe-re">
+      <td class="num">19</td>
+      <td>
+        <div class="nom-fr">Emmanuelle Hoffman</div>
+        <div class="poste-fr">Conseillère de Paris — ancienne députée Re <span class="src src-o">○</span></div>
+        <div class="poste-zh">巴黎市议员；前国民议会议员（Re）</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Renaissance；与Chassaniol同属巴黎Re议员团</div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Même profil que Chassaniol — groupe Re Paris. <span class="src src-o">○</span></div>
+        <div class="coop-zh">同Chassaniol；巴黎市议会Re党团</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Idem Chassaniol. <span class="src src-o">○</span></div>
+        <div class="coop-zh">同Chassaniol；巴黎在野格局下的跨阵营生态</div>
+      </td>
+    </tr>
+
+    <!-- 26. Lesieur 小安 -->
+    <tr class="stripe-re">
+      <td class="num">26</td>
+      <td>
+        <div class="nom-fr">Antoine Lesieur <span class="star">★★</span></div>
+        <div class="poste-fr">Candidat Paris 6e (1er tour 16,11 % — 2e tour 14,26 % — aucun siège) <span class="src src-v">✅</span></div>
+        <div class="poste-zh">参选巴黎6区区长；第二轮14.26%，未获席位；长期担任Attal首席政治顾问（Matignon）</div>
+        <div class="result-tag result-perdu">Non élu ✅</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Renaissance；Attal团队"Power Rangers"核心四人组之一；前Re巴黎秘书长</div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Aux côtés d'Attal depuis 2017. Soutenu par Attal. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">2017年起追随Attal；获Attal背书</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Dans le 6e, Lecoq (LR) élu à 53,66 % : Re distancé par LR dans un arrondissement historiquement à droite. Signal d'une concurrence Re-LR non résolue. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">LR候选人Lecoq以53.66%大胜，Re与LR在右翼传统选区中仍为竞争而非整合关系——Re-LR融合的困境的缩影</div>
+      </td>
+    </tr>
+
+    <!-- 27. Pardo -->
+    <tr class="stripe-re">
+      <td class="num">27</td>
+      <td>
+        <div class="nom-fr">Rachel-Flore Pardo</div>
+        <div class="poste-fr">Conseillère de Paris (Re) <span class="src src-o">○</span></div>
+        <div class="poste-zh">巴黎市议员（Re）</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Renaissance；巴黎市议会Re党团</div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Groupe Re au Conseil de Paris. <span class="src src-o">○</span></div>
+        <div class="coop-zh">巴黎市议会Re党团成员</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Opposition structurelle à la majorité Grégoire (PS) à Paris. <span class="src src-o">○</span></div>
+        <div class="coop-zh">巴黎在野格局；结构性对立PS主导多数</div>
+      </td>
+    </tr>
+
+    <!-- SECTION 5 -->
+    <tr class="section-row">
+      <td colspan="5">V. Conseillers régionaux &amp; autres élus stratégiques <span class="zh">· 大区议员及战略性代表</span></td>
+    </tr>
+
+    <!-- 22. Oppelt -->
+    <tr class="stripe-re">
+      <td class="num">22</td>
+      <td>
+        <div class="nom-fr">Valérie Oppelt</div>
+        <div class="poste-fr">Conseillère municipale de Nantes — ancienne députée Re (Loire-Atlantique) <span class="src src-o">○</span></div>
+        <div class="poste-zh">Nantes市议员；前国民议会议员（Re，卢瓦尔-大西洋省）</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Renaissance；卢瓦尔-大西洋省Re骨干</div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Réseau Re Loire-Atlantique. <span class="src src-o">○</span></div>
+        <div class="coop-zh">卢瓦尔-大西洋省Re网络</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Nantes dirigé par gauche-EELV : Re en opposition ; dialogue maintenu avec centre-gauche modéré. <span class="src src-o">○</span></div>
+        <div class="coop-zh">Nantes绿党+左翼执政；Re处于在野；与温和中左保持对话</div>
+      </td>
+    </tr>
+
+    <!-- 24. Taquillain -->
+    <tr class="stripe-re">
+      <td class="num">24</td>
+      <td>
+        <div class="nom-fr">Aurélie Taquillain</div>
+        <div class="poste-fr">Conseillère municipale de Courbevoie — conseillère régionale Île-de-France <span class="src src-o">○</span></div>
+        <div class="poste-zh">Courbevoie市议员；法兰西岛大区议员</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Renaissance；IDF大区Re议员团成员</div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Groupe Re dans le Conseil régional d'Île-de-France. <span class="src src-o">○</span></div>
+        <div class="coop-zh">IDF大区议会Re议员团</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Dans la Région IDF gouvernée par Pécresse (Libres!/LR) : coexistence institutionnelle Re-LR avec tensions compétitives. <span class="src src-o">○</span></div>
+        <div class="coop-zh">在Pécresse（Libres!/LR）主导的IDF大区政府下运作——制度性共存但存在竞争张力</div>
+      </td>
+    </tr>
+
+    <!-- 28. Halphen -->
+    <tr class="stripe-re">
+      <td class="num">28</td>
+      <td>
+        <div class="nom-fr">Sacha Halphen</div>
+        <div class="poste-fr">Candidat sur liste « Tous Levallois ! » (Messatfa, LDVC) — 20,81 % <span class="src src-v">✅</span></div>
+        <div class="poste-zh">在Levallois-Perret以"Tous Levallois!"（Messatfa领衔）名单排名第3；该名单获20.81%；在野</div>
+        <div class="result-tag result-perdu">Liste minoritaire ✅</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Re/中间；Hauts-de-Seine都市圈Re年轻成员</div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Intégré dans une liste non Re mais centriste pro-Attal à Levallois. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">加入非Re旗号但亲Attal的中间联盟名单——务实的地方联盟策略</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Levallois : bastion historique de droite (Balkany). Choix d'intégrer une alliance locale souple plutôt qu'une liste Re autonome. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">Levallois传统右翼堡垒；选择融入软性地方联盟而非单独打Re旗号，显示务实跨界策略</div>
+      </td>
+    </tr>
+
+    <!-- 29. Reda -->
+    <tr class="stripe-dvd">
+      <td class="num">29</td>
+      <td>
+        <div class="nom-fr">Robin Reda <span class="star">★★</span></div>
+        <div class="poste-fr">Conseiller régional Île-de-France (DVD) — directeur pôle Élections, Re <span class="src src-v">✅</span></div>
+        <div class="poste-zh">法兰西岛大区议员（DVD）；Re党内"选举"部门主任；2024年未能连任国民议会议员</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-dvd">DVD</span>→<span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">政治轨迹：LR → Pécresse的Libres! → Re；现为Re正式成员兼DVD大区议员；前Essonne第7选区议员（2017-2024）</div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Responsable de la stratégie électorale Re au niveau national. Passage de LR à Re : trajectoire emblématique de la recomposition. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">主管Re全国选举战略；本身就是LR→Re政治重组的活体案例</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Région IDF : travail avec la majorité Pécresse (Libres!/LR) tout en appartenant à Re. Position de passerelle Re-LR. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">在Pécresse（Libres!/LR）主导的IDF大区议会中运作；身兼Re正式成员与右翼多数合作者双重身份，为Re-LR桥接的典型代表</div>
+      </td>
+    </tr>
+
+    <!-- Peillon -->
+    <tr class="stripe-re">
+      <td class="num">23</td>
+      <td>
+        <div class="nom-fr">Sarah Peillon</div>
+        <div class="poste-fr">Conseillère de Lyon — vice-présidente de la Métropole de Lyon <span class="src src-o">○</span></div>
+        <div class="poste-zh">里昂市议员；里昂都市圈副主席</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Renaissance正式成员；Bureau exécutif成员（普通成员）<span class="src src-v">✅ doc.parti.re/Bureau_executif_2025.pdf</span></div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Coalition Re-centre dans la métropole de Lyon. <span class="src src-o">○</span></div>
+        <div class="coop-zh">里昂都市圈Re/中间联合体</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Coopération institutionnelle possible avec la mairie verte (Doucet) au niveau métropolitain ; ouverture vers LR. <span class="src src-o">○</span></div>
+        <div class="coop-zh">都市圈层面与绿党Doucet团队存在制度性合作空间；同时向LR保持开放</div>
+      </td>
+    </tr>
+
+    <!-- Altounian -->
+    <tr class="stripe-re">
+      <td class="num">25</td>
+      <td>
+        <div class="nom-fr">Magali Altounian</div>
+        <div class="poste-fr">Conseillère municipale de Nice <span class="src src-o">○</span></div>
+        <div class="poste-zh">Nice市议员</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Renaissance正式成员；Bureau exécutif成员（普通成员）<span class="src src-v">✅ doc.parti.re/Bureau_executif_2025.pdf</span>；Nice自2026年3月起由UDR（极右）Ciotti执政</div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Groupe Re en opposition dans un conseil municipal désormais dominé par Ciotti (UDR/RN) — Estrosi (Horizons) battu, retrait de la vie politique locale. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">Estrosi（Horizons）落败并宣布放弃所有地方职务；Ciotti（UDR，获RN支持）以**48.54%**当选（ICI Azur确认）；Re在Nice完全处于在野，面对极右执政格局</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Nice bascule à l'extrême droite (mars 2026) : Re en opposition frontale à Ciotti/RN. Estrosi (Horizons), allié naturel du centre, éliminé. Coopération inter-partis quasi impossible dans ce contexte. <span class="src src-v">✅</span></div>
+        <div class="coop-zh">Nice落入极右（UDR/RN）之手；Re与中间的天然盟友Estrosi（Horizons）均告落败；Re在Nice处于与极右正面对立的处境，跨阵营合作空间几乎为零</div>
+      </td>
+    </tr>
+
+    <!-- Million -->
+    <tr class="stripe-re">
+      <td class="num">21</td>
+      <td>
+        <div class="nom-fr">Lara Million</div>
+        <div class="poste-fr">1re adjointe au maire de Mulhouse — vice-présidente CEA (Eurométropole de Strasbourg) <span class="src src-o">○</span></div>
+        <div class="poste-zh">Mulhouse第一副市长；斯特拉斯堡欧洲大都会区（CEA）副主席</div>
+      </td>
+      <td class="parti">
+        <div class="parti-main"><span class="badge badge-re">Re</span></div>
+        <div class="parti-zh">Re/中间；大东部地区Re代表性女性干部；兼顾城市与跨境欧洲议题</div>
+      </td>
+      <td class="coop-intra">
+        <div class="coop-fr">Coordination Re-MoDem dans le Haut-Rhin. <span class="src src-o">○</span></div>
+        <div class="coop-zh">上莱茵省Re-MoDem协调</div>
+      </td>
+      <td class="coop-cross">
+        <div class="coop-fr">Mulhouse : coopération Re avec MoDem et LR locaux sur fond transfrontalier rhénan. <span class="src src-o">○</span></div>
+        <div class="coop-zh">Mulhouse工业城市格局中Re与MoDem及LR的地方合作；欧洲跨境议题增加了合作的层次</div>
+      </td>
+    </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-tricolor"><div class="b"></div><div class="w"></div><div class="r"></div></div>
+  <div class="footer">
+    <div class="footer-left">Sources : France Bleu · ICI · Public Sénat · Acteurs Publics · Le Moniteur · Wikipedia · Résultats officiels Ministère de l'Intérieur 2026 · La Tribune</div>
+    <div class="footer-right">制作日期：2026年5月 · 数据以公开来源为准 · ✅ = 搜索溯源 · ○ = 文件+公开常识推断</div>
+  </div>
+
+  <!-- SYNTHESIS BOX -->
+  <div style="margin-top:28px; background:#faf7f2; border:1px solid #d0d5e8; box-shadow:0 4px 20px rgba(0,35,149,0.1);">
+    <div style="background:var(--rouge);padding:10px 24px;">
+      <span style="font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:#fff;letter-spacing:1px;">SYNTHÈSE · </span>
+      <span style="font-family:'Noto Serif SC',serif;font-size:12px;color:rgba(255,255,255,0.75);font-weight:300;">横向综合分析</span>
+    </div>
+    <div style="overflow-x:auto;">
+    <div style="padding:20px 24px;display:grid;grid-template-columns:repeat(3,minmax(280px,1fr));gap:20px;min-width:860px;">
+      <div>
+        <div style="font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--bleu);margin-bottom:8px;font-family:'Source Serif 4',serif;">Cohésion intra-camp · 阵营内团结</div>
+        <div style="font-size:11.5px;color:var(--texte);line-height:1.7;">Re核心（Cazenave、Armand、Riester、Lesieur）高度一致。Re与Horizons属竞争性共存：France Info（2024年3月）记录两党议会组长Maillard与Marcangeli间"guerre froide"；Attal与Philippe存在退选协议框架——若出现LFI-RN决赛风险，位次靠后者先退（CNews 06/05/2026 ✅）。MoDem：Bayrou于3月31日在LCI表示"n'ai pas l'élection présidentielle en ligne de mire"（CNews 01/04/2026 ✅）；Pau市政选举落败、卸任总理后，Bayrou转而主动组局——5月18日在国民议会启动"confédération du centre"大动作：计划联合MoDem、UDI（Marseille）、Parti radical（Delattre）与Borne的"Bâtissons ensemble"，MoDem议员Ramos明确表示目标是"围绕几个核心议题整合，而非围绕一个人"（La Tribune Dimanche Vigogne 17/05/2026 + BFM TV 18/05/2026 ✅）。此举被解读为针对Attal-Re阵营的中间力量重组，同时将Parti radical（Delattre）——原Cazenave波尔多联盟的关键盟友——向Bayrou轨道牵引，使Re跨阵营合作格局更趋复杂。Etchegaray（Bayonne）为Re执行局成员，但MoDem整体战略已明显偏离Re路线。Agir（Riester）已完全并入Re。</div>
+      </div>
+      <div>
+        <div style="font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--rouge);margin-bottom:8px;font-family:'Source Serif 4',serif;">Coopération inter-partis · 跨阵营模式</div>
+        <div style="font-size:11.5px;color:var(--texte);line-height:1.7;"><strong>→ LR/中右</strong>：实质性合作——Cazenave波尔多（Re+Horizons+MoDem+Parti Radical联合）、Armand安纳西（Re+Horizons+MoDem+LR+Parti Radical+UDI联合）均以多党中右联盟模式胜选。<strong>→ EELV/中左</strong>：仅Muselier大区层面有条件容纳。<strong>→ LFI/RN</strong>：全体对立，明确隔离。</div>
+      </div>
+      <div>
+        <div style="font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--or);margin-bottom:8px;font-family:'Source Serif 4',serif;">Signal politique · 政治信号读取</div>
+        <div style="font-size:11.5px;color:var(--texte);line-height:1.7;">2026年5月12日Re全国委员会以221票（91%）对22票（9%）、10票弃权通过参选动议（CNews 13/05/2026 ✅）；候选资格须再经党员投票确认。Re内部分歧公开暴露：Borne于5月6日在France Inter宣布辞去全国委员会主席并退出执行局，全文："Je ne me retrouve pas complètement dans la ligne qui n'est pas forcément débattue au sein de Renaissance, donc j'ai décidé de démissionner du Conseil national de Renaissance, de me mettre en retrait du bureau exécutif et de me consacrer à la structure que j'ai créée, Bâtissons ensemble"（France Info 06/05/2026 ✅）。"Bâtissons ensemble"定位为"汇聚改革力量、超越党派框架"的跨谱平台，覆盖中左至温和右翼（France Info éditorial ✅）。Borne明确表示不参选总统（"候选人已太多"），但其离开时间——恰在5月12日Re正式动议前数日——France Info评论视之为"难以视为巧合"（France Info 06/05/2026 ✅）。Attal次日在France Info回应："她有权做出自己的选择，我无需评论"（France Info 07/05/2026 ✅）。5月18日Bayrou启动"confédération du centre"，中间阵营走向趋于复杂，各方布局尚在演进中，整体态势暂不明朗。BFM TV引述Bayrou亲近人士："François Bayrou ne fait pas tout ça pour rien"（BFM TV 18/05/2026 ✅）。</div>
+      </div>
+    </div>
+    </div><!-- end overflow-x -->
+  </div>
+
+</div>
+</body>
+</html>
